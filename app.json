@@ -1,0 +1,51 @@
+{
+  "expo": {
+    "name": "Accessible Chennai",
+    "slug": "accessible-chennai",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#1976d2"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.accessiblechennai.app",
+      "infoPlist": {
+        "NSSpeechRecognitionUsageDescription": "This app uses speech recognition for voice-guided navigation.",
+        "NSMicrophoneUsageDescription": "This app uses the microphone for voice commands.",
+        "NSLocationWhenInUseUsageDescription": "This app uses your location to find accessible routes near you."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#1976d2"
+      },
+      "package": "com.accessiblechennai.app",
+      "permissions": [
+        "RECORD_AUDIO",
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "VIBRATE",
+        "CALL_PHONE",
+        "SEND_SMS"
+      ]
+    },
+    "plugins": [
+      "expo-location",
+      [
+        "expo-speech-recognition",
+        {
+          "microphonePermission": "Accessible Chennai needs the microphone for voice commands.",
+          "speechRecognitionPermission": "Accessible Chennai uses speech recognition for voice-guided navigation.",
+          "androidSpeechServicePackages": ["com.google.android.tts"]
+        }
+      ]
+    ]
+  }
+}
