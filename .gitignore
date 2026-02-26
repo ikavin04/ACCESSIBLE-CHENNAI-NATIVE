@@ -14,7 +14,14 @@ web-build/
 android/app/build/
 android/build/
 android/.gradle/
+android/.cxx/
 android/local.properties
+android/app/debug.keystore
+
+# Backup files
+*.backup.*
+*.backup2.*
+*.bak
 
 # iOS
 ios/Pods/
